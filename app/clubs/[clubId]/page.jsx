@@ -13,7 +13,7 @@ function ClubDetailContent({ clubId }) {
 
   const [clubData, setClubData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
+  const [error, setError] = useState(null);
   const [activeTab, setActiveTab] = useState('matches');
 
   useEffect(() => {
@@ -22,19 +22,24 @@ function ClubDetailContent({ clubId }) {
 
   async function fetchClubData() {
     setLoading(true);
-    setError('');
+    setError(null);
 
     try {
       const res = await fetch(`/api/ea/clubs/${clubId}?platform=${platform}`);
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || 'Failed to fetch club data');
+        setError({
+          message: data.error || 'Failed to fetch club data',
+          hint: data.hint,
+          clubName: data.clubName,
+        });
+        return;
       }
 
       setClubData(data);
     } catch (err) {
-      setError(err.message);
+      setError({ message: err.message });
     } finally {
       setLoading(false);
     }
@@ -54,12 +59,20 @@ function ClubDetailContent({ clubId }) {
   if (error) {
     return (
       <div className="text-center py-16">
-        <div className="text-6xl mb-4">😕</div>
-        <h2 className="text-2xl font-bold text-white mb-2">Failed to load club</h2>
-        <p className="text-slate-400 mb-6">{error}</p>
-        <Link href="/" className="btn-primary">
-          Back to Search
-        </Link>
+        <div className="text-6xl mb-4">📭</div>
+        <h2 className="text-2xl font-bold text-white mb-2">
+          {error.clubName || 'Club'} - No Data Available
+        </h2>
+        <p className="text-slate-400 mb-2">{error.message}</p>
+        {error.hint && <p className="text-slate-500 text-sm mb-6">{error.hint}</p>}
+        <div className="flex gap-4 justify-center">
+          <Link href="/clubs" className="btn-primary">
+            Search Clubs
+          </Link>
+          <Link href="/" className="px-6 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-700 transition">
+            Back to Home
+          </Link>
+        </div>
       </div>
     );
   }

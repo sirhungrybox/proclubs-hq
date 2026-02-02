@@ -1,9 +1,14 @@
 import { NextResponse } from 'next/server';
 import { getClubStats, getClubMatches, getPlayerStats } from '@/lib/ourproclub-api';
+import clubsDatabase from '@/data/clubs-database.json';
 
 export async function GET(request, { params }) {
   try {
     const { clubId } = await params;
+
+    // Get club name from database if available
+    const dbClub = clubsDatabase.clubs.find(c => c.id === clubId || c.id === String(clubId));
+    const clubNameFromDb = dbClub?.name || null;
 
     // Fetch all data in parallel from OurProClub API (limit=500 for max results)
     const [stats, matches, players] = await Promise.all([
@@ -14,8 +19,10 @@ export async function GET(request, { params }) {
 
     if (!stats && matches.length === 0) {
       return NextResponse.json({
-        error: 'Club not found or no match data available.',
-        hint: 'Try searching for the club by name or verify the club ID.'
+        error: `No match data available for ${clubNameFromDb || 'this club'}.`,
+        hint: 'This club may not have recorded any matches yet.',
+        clubName: clubNameFromDb,
+        clubId: clubId,
       }, { status: 404 });
     }
 

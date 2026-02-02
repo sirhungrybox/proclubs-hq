@@ -5,17 +5,17 @@ export async function GET(request, { params }) {
   try {
     const { clubId } = await params;
 
-    // Fetch all data in parallel from OurProClub API
+    // Fetch all data in parallel from OurProClub API (limit=500 for max results)
     const [stats, matches, players] = await Promise.all([
       getClubStats(clubId, 500).catch(() => null),
-      getClubMatches(clubId, 50).catch(() => []),
+      getClubMatches(clubId, 500).catch(() => []),
       getPlayerStats(clubId, 500).catch(() => []),
     ]);
 
     if (!stats && matches.length === 0) {
       return NextResponse.json({
-        error: 'Club not found. Make sure this club uses the OurProClub Discord bot.',
-        hint: 'The club must have used /matches or /automode commands to have data available.'
+        error: 'Club not found or no match data available.',
+        hint: 'Try searching for the club by name or verify the club ID.'
       }, { status: 404 });
     }
 
@@ -72,7 +72,7 @@ export async function GET(request, { params }) {
   } catch (error) {
     console.error('Club data error:', error);
     return NextResponse.json({
-      error: 'Failed to fetch club data from OurProClub API.',
+      error: 'Failed to fetch club data. Please try again later.',
       message: error.message
     }, { status: 503 });
   }

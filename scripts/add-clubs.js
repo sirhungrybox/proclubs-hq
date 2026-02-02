@@ -28,6 +28,7 @@ async function crawlClubs(seedClubs) {
 
   for (const clubId of seedClubs) {
     const url = 'https://api.ourproclub.app/api/match/history?clubId=' + clubId + '&limit=500';
+    console.log('Fetching:', url);
     const matches = await fetch(url);
 
     if (!Array.isArray(matches) || matches.length === 0) {

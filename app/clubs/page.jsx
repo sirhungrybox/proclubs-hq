@@ -124,7 +124,7 @@ function ClubSearchContent() {
               <p className="text-slate-500 mb-4">Try a different search term</p>
               <div className="text-sm text-slate-600 max-w-md mx-auto">
                 <p className="mb-2">Can't find your club? It may not be in our database yet.</p>
-                <p>Clubs are added when they use the OurProClub Discord bot.</p>
+                <p>Try searching by club ID directly from the home page.</p>
               </div>
             </div>
           ) : (
@@ -170,7 +170,7 @@ function ClubSearchContent() {
             Enter a club name above to search for Pro Clubs teams and view their detailed statistics
           </p>
           <div className="text-xs text-slate-600">
-            Powered by OurProClub API • {dbInfo?.total || '700+'} clubs indexed
+            {dbInfo?.total || '700+'} clubs indexed
           </div>
         </div>
       )}

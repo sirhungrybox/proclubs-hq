@@ -141,16 +141,44 @@ export default function PlayerList({ players }) {
 
             {/* Expanded Stats */}
             {selectedPlayer === player && (
-              <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-slate-700/50 space-y-2">
+              <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-slate-700/50 space-y-3">
+                {/* Pass & Tackle Accuracy Bars */}
+                <div className="space-y-2">
+                  <div>
+                    <div className="flex justify-between text-xs mb-1">
+                      <span className="text-slate-400">Pass Accuracy</span>
+                      <span className="text-white font-medium">{player.passAccuracy || 0}%</span>
+                    </div>
+                    <div className="h-1.5 bg-slate-700 rounded-full overflow-hidden">
+                      <div
+                        className={`h-full transition-all duration-300 ${
+                          (player.passAccuracy || 0) >= 85 ? 'bg-green-500' :
+                          (player.passAccuracy || 0) >= 75 ? 'bg-cyan-500' :
+                          (player.passAccuracy || 0) >= 65 ? 'bg-yellow-500' : 'bg-red-500'
+                        }`}
+                        style={{ width: `${player.passAccuracy || 0}%` }}
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between text-xs mb-1">
+                      <span className="text-slate-400">Tackle Success</span>
+                      <span className="text-white font-medium">{player.tackleSuccess || 0}%</span>
+                    </div>
+                    <div className="h-1.5 bg-slate-700 rounded-full overflow-hidden">
+                      <div
+                        className={`h-full transition-all duration-300 ${
+                          (player.tackleSuccess || 0) >= 70 ? 'bg-green-500' :
+                          (player.tackleSuccess || 0) >= 50 ? 'bg-cyan-500' :
+                          (player.tackleSuccess || 0) >= 35 ? 'bg-yellow-500' : 'bg-red-500'
+                        }`}
+                        style={{ width: `${player.tackleSuccess || 0}%` }}
+                      />
+                    </div>
+                  </div>
+                </div>
+
                 <div className="grid grid-cols-2 gap-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-slate-400">Pass Accuracy</span>
-                    <span className="text-white font-medium">{player.passAccuracy || 0}%</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-slate-400">Tackle Success</span>
-                    <span className="text-white font-medium">{player.tackleSuccess || 0}%</span>
-                  </div>
                   {player.saves > 0 && (
                     <div className="flex justify-between">
                       <span className="text-slate-400">Saves</span>

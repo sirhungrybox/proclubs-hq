@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_master",
+      "username": "admin",
+      "email": "admin@proclubshq.com",
+      "passwordHash": "$2b$10$qypwmPOsBNINKohuMhRnY.VXQsBb/SnjIJP1umEVVQKjVUXryhT9m",
+      "role": "admin",
+      "profile": {
+        "platform": "ps5",
+        "eaPlayerName": "ProClubsHQ_Admin",
+        "linkedClub": null
+      },
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ]
+}

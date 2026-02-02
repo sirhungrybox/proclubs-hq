@@ -65,17 +65,14 @@ function ClubDetailContent({ clubId }) {
     );
   }
 
-  const { info, stats, seasonalStats, members, matches } = clubData || {};
+  const { info, stats, members, matches } = clubData || {};
 
-  // Calculate recent form
-  const recentMatches = matches?.slice(0, 5) || [];
-  const form = recentMatches.map(match => {
-    const clubMatchData = match.clubs?.[clubId] || Object.values(match.clubs)[0];
-    const opponent = Object.entries(match.clubs).find(([id]) => id !== String(clubId))?.[1];
-    if (clubMatchData?.goals > (opponent?.goals || 0)) return 'W';
-    if (clubMatchData?.goals < (opponent?.goals || 0)) return 'L';
+  // Get recent form from stats or calculate from matches
+  const form = stats?.recentForm || matches?.slice(0, 5).map(match => {
+    if (match.result === 'win') return 'W';
+    if (match.result === 'loss') return 'L';
     return 'D';
-  });
+  }) || [];
 
   const tabs = [
     { id: 'matches', label: 'Matches', icon: '📊' },
@@ -104,14 +101,14 @@ function ClubDetailContent({ clubId }) {
               {info?.name || 'Unknown Club'}
             </h1>
             <div className="flex flex-wrap items-center gap-3 text-sm text-slate-400">
-              {seasonalStats?.currentDivision && (
-                <span className="px-3 py-1 bg-slate-800 rounded-full">
-                  Division {seasonalStats.currentDivision}
+              {stats?.winRate && (
+                <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full font-semibold">
+                  {stats.winRate}% Win Rate
                 </span>
               )}
-              {seasonalStats?.skill_rating && (
-                <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full font-semibold">
-                  {seasonalStats.skill_rating} SR
+              {stats?.gamesPlayed && (
+                <span className="px-3 py-1 bg-slate-800 rounded-full">
+                  {stats.gamesPlayed} Games
                 </span>
               )}
               <span className="text-slate-500">ID: {clubId}</span>
@@ -186,7 +183,7 @@ function ClubDetailContent({ clubId }) {
       )}
 
       {activeTab === 'stats' && stats && (
-        <ClubStats stats={stats} seasonalStats={seasonalStats} matches={matches} />
+        <ClubStats stats={stats} matches={matches} />
       )}
 
       {activeTab === 'squad' && (

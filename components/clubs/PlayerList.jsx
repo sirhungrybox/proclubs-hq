@@ -1,9 +1,5 @@
 'use client';
 
-import {
-  RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
-  Radar, ResponsiveContainer, Tooltip
-} from 'recharts';
 import { useState } from 'react';
 
 const POSITION_COLORS = {
@@ -24,6 +20,7 @@ const POSITION_LABELS = {
 
 export default function PlayerList({ players }) {
   const [selectedPlayer, setSelectedPlayer] = useState(null);
+  const [sortBy, setSortBy] = useState('gamesPlayed');
 
   if (!players || players.length === 0) {
     return (
@@ -33,8 +30,13 @@ export default function PlayerList({ players }) {
     );
   }
 
-  // Sort players by games played
-  const sortedPlayers = [...players].sort((a, b) => (b.gamesPlayed || 0) - (a.gamesPlayed || 0));
+  // Sort players
+  const sortedPlayers = [...players].sort((a, b) => {
+    if (sortBy === 'avgRating') return parseFloat(b.avgRating || 0) - parseFloat(a.avgRating || 0);
+    if (sortBy === 'goals') return (b.goals || 0) - (a.goals || 0);
+    if (sortBy === 'assists') return (b.assists || 0) - (a.assists || 0);
+    return (b.gamesPlayed || 0) - (a.gamesPlayed || 0);
+  });
 
   return (
     <div className="space-y-6">
@@ -64,6 +66,27 @@ export default function PlayerList({ players }) {
         </div>
       </div>
 
+      {/* Sort Options */}
+      <div className="flex gap-2 flex-wrap">
+        <span className="text-sm text-slate-400 py-1">Sort by:</span>
+        {[
+          { key: 'gamesPlayed', label: 'Games' },
+          { key: 'avgRating', label: 'Rating' },
+          { key: 'goals', label: 'Goals' },
+          { key: 'assists', label: 'Assists' },
+        ].map(({ key, label }) => (
+          <button
+            key={key}
+            onClick={() => setSortBy(key)}
+            className={`px-3 py-1 rounded-full text-sm ${
+              sortBy === key ? 'bg-cyan-500/20 text-cyan-400' : 'bg-slate-800 text-slate-400 hover:text-white'
+            }`}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+
       {/* Player Grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
         {sortedPlayers.map((player, index) => (
@@ -75,14 +98,22 @@ export default function PlayerList({ players }) {
             <div className="flex items-start justify-between mb-3 sm:mb-4">
               <div className="min-w-0 flex-1 mr-2">
                 <h3 className="text-base sm:text-lg font-semibold text-white truncate">{player.name}</h3>
-                {player.proName && (
-                  <p className="text-xs sm:text-sm text-slate-400 truncate">{player.proName}</p>
-                )}
+                <div className="flex items-center gap-2 mt-1">
+                  <span className={`w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold ${
+                    parseFloat(player.avgRating) >= 7.5 ? 'bg-green-500/20 text-green-400' :
+                    parseFloat(player.avgRating) >= 7 ? 'bg-cyan-500/20 text-cyan-400' :
+                    parseFloat(player.avgRating) >= 6.5 ? 'bg-yellow-500/20 text-yellow-400' :
+                    'bg-red-500/20 text-red-400'
+                  }`}>
+                    {player.avgRating || '-'}
+                  </span>
+                  <span className="text-xs text-slate-500">Avg Rating</span>
+                </div>
               </div>
               <span className={`px-2 py-1 rounded text-xs font-medium border flex-shrink-0 ${
                 POSITION_COLORS[player.proPos] || POSITION_COLORS.midfielder
               }`}>
-                {POSITION_LABELS[player.proPos] || player.favoritePosition || 'MID'}
+                {POSITION_LABELS[player.proPos] || 'MID'}
               </span>
             </div>
 
@@ -101,71 +132,53 @@ export default function PlayerList({ players }) {
               </div>
             </div>
 
-            {player.proOverall && (
-              <div className="flex items-center justify-between text-xs sm:text-sm">
-                <span className="text-slate-400">Overall</span>
-                <span className="font-semibold text-yellow-400">{player.proOverall}</span>
-              </div>
-            )}
-
             {player.manOfTheMatch > 0 && (
-              <div className="flex items-center justify-between text-xs sm:text-sm mt-2">
+              <div className="flex items-center justify-between text-xs sm:text-sm">
                 <span className="text-slate-400">Man of Match</span>
-                <span className="font-semibold text-yellow-400">{player.manOfTheMatch}</span>
+                <span className="font-semibold text-yellow-400">⭐ {player.manOfTheMatch}</span>
               </div>
             )}
 
             {/* Expanded Stats */}
             {selectedPlayer === player && (
-              <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-slate-700/50">
-                <PlayerRadar player={player} />
+              <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-slate-700/50 space-y-2">
+                <div className="grid grid-cols-2 gap-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-slate-400">Pass Accuracy</span>
+                    <span className="text-white font-medium">{player.passAccuracy || 0}%</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-slate-400">Tackle Success</span>
+                    <span className="text-white font-medium">{player.tackleSuccess || 0}%</span>
+                  </div>
+                  {player.saves > 0 && (
+                    <div className="flex justify-between">
+                      <span className="text-slate-400">Saves</span>
+                      <span className="text-white font-medium">{player.saves}</span>
+                    </div>
+                  )}
+                  {player.cleanSheets > 0 && (
+                    <div className="flex justify-between">
+                      <span className="text-slate-400">Clean Sheets</span>
+                      <span className="text-white font-medium">{player.cleanSheets}</span>
+                    </div>
+                  )}
+                  <div className="flex justify-between">
+                    <span className="text-slate-400">Minutes Played</span>
+                    <span className="text-white font-medium">{(player.minutesPlayed || 0).toLocaleString()}</span>
+                  </div>
+                  {player.redCards > 0 && (
+                    <div className="flex justify-between">
+                      <span className="text-slate-400">Red Cards</span>
+                      <span className="text-red-400 font-medium">{player.redCards}</span>
+                    </div>
+                  )}
+                </div>
               </div>
             )}
           </div>
         ))}
       </div>
     </div>
-  );
-}
-
-function PlayerRadar({ player }) {
-  // Normalize stats for radar chart (0-100 scale)
-  const gamesPlayed = player.gamesPlayed || 1;
-  const goalsPerGame = Math.min(((player.goals || 0) / gamesPlayed) * 50, 100);
-  const assistsPerGame = Math.min(((player.assists || 0) / gamesPlayed) * 50, 100);
-  const passRate = (player.passSuccessRate || 0.7) * 100;
-  const tackleRate = (player.tackleSuccessRate || 0.5) * 100;
-  const shotRate = (player.shotSuccessRate || 0.3) * 100;
-
-  const data = [
-    { stat: 'Goals', value: goalsPerGame },
-    { stat: 'Assists', value: assistsPerGame },
-    { stat: 'Passing', value: passRate },
-    { stat: 'Shooting', value: shotRate * 2 },
-    { stat: 'Tackling', value: tackleRate },
-  ];
-
-  return (
-    <ResponsiveContainer width="100%" height={200}>
-      <RadarChart data={data}>
-        <PolarGrid stroke="#334155" />
-        <PolarAngleAxis dataKey="stat" tick={{ fill: '#94a3b8', fontSize: 11 }} />
-        <PolarRadiusAxis tick={false} axisLine={false} />
-        <Radar
-          name={player.name}
-          dataKey="value"
-          stroke="#06b6d4"
-          fill="#06b6d4"
-          fillOpacity={0.3}
-        />
-        <Tooltip
-          contentStyle={{
-            backgroundColor: '#1e293b',
-            border: '1px solid #334155',
-            borderRadius: '8px'
-          }}
-        />
-      </RadarChart>
-    </ResponsiveContainer>
   );
 }

@@ -6,7 +6,7 @@ import {
   PieChart, Pie, Cell, Legend
 } from 'recharts';
 
-export default function ClubStats({ stats, seasonalStats, matches }) {
+export default function ClubStats({ stats, matches }) {
   if (!stats) {
     return (
       <div className="text-center py-12 text-slate-400">
@@ -22,11 +22,10 @@ export default function ClubStats({ stats, seasonalStats, matches }) {
 
   // Prepare chart data from matches
   const matchChartData = matches?.slice(0, 10).reverse().map((match, i) => {
-    const clubData = Object.values(match.clubs)[0];
     return {
       match: `M${i + 1}`,
-      possession: clubData?.possession || 0,
-      goals: clubData?.goals || 0,
+      goals: match.score?.own || 0,
+      rating: match.players?.reduce((sum, p) => sum + (p.rating || 0), 0) / (match.players?.length || 1) || 0,
     };
   }) || [];
 
@@ -42,14 +41,8 @@ export default function ClubStats({ stats, seasonalStats, matches }) {
       {/* Overview Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <StatBox
-          label="Skill Rating"
-          value={seasonalStats?.skill_rating || '-'}
-          icon="📊"
-          color="cyan"
-        />
-        <StatBox
           label="Win Rate"
-          value={`${winRate}%`}
+          value={`${stats.winRate || winRate}%`}
           icon="🏆"
           color="green"
         />
@@ -58,6 +51,12 @@ export default function ClubStats({ stats, seasonalStats, matches }) {
           value={stats.goals?.toLocaleString()}
           icon="⚽"
           color="purple"
+        />
+        <StatBox
+          label="Goals Against"
+          value={stats.goalsAgainst?.toLocaleString()}
+          icon="🥅"
+          color="cyan"
         />
         <StatBox
           label="Clean Sheets"
@@ -71,7 +70,7 @@ export default function ClubStats({ stats, seasonalStats, matches }) {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <StatBox
           label="Total Games"
-          value={totalGames?.toLocaleString()}
+          value={stats.gamesPlayed?.toLocaleString() || totalGames?.toLocaleString()}
           icon="🎮"
         />
         <StatBox
@@ -80,16 +79,64 @@ export default function ClubStats({ stats, seasonalStats, matches }) {
           icon="📈"
         />
         <StatBox
-          label="Titles Won"
-          value={stats.titlesWon || 0}
-          icon="🏅"
+          label="Avg Goals For"
+          value={stats.avgGoalsFor || '-'}
+          icon="⚡"
         />
         <StatBox
-          label="Best Division"
-          value={stats.bestDivision || '-'}
-          icon="🥇"
+          label="Avg Goals Against"
+          value={stats.avgGoalsAgainst || '-'}
+          icon="🛡️"
         />
       </div>
+
+      {/* Recent Form */}
+      {stats.recentForm && stats.recentForm.length > 0 && (
+        <div className="card p-4 sm:p-6">
+          <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-white">Recent Form</h3>
+          <div className="flex gap-2">
+            {stats.recentForm.map((result, i) => (
+              <div
+                key={i}
+                className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex items-center justify-center text-lg font-bold ${
+                  result === 'W' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
+                  result === 'L' ? 'bg-red-500/20 text-red-400 border border-red-500/30' :
+                  'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
+                }`}
+              >
+                {result}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Match Type Breakdown */}
+      {stats.matchTypes && (
+        <div className="card p-4 sm:p-6">
+          <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-white">Match Types</h3>
+          <div className="grid grid-cols-3 gap-4">
+            {stats.matchTypes.leagueMatch > 0 && (
+              <div className="text-center p-3 bg-slate-800/50 rounded-lg">
+                <div className="text-2xl font-bold text-cyan-400">{stats.matchTypes.leagueMatch}</div>
+                <div className="text-xs text-slate-400">Division Rivals</div>
+              </div>
+            )}
+            {stats.matchTypes.playoffMatch > 0 && (
+              <div className="text-center p-3 bg-slate-800/50 rounded-lg">
+                <div className="text-2xl font-bold text-purple-400">{stats.matchTypes.playoffMatch}</div>
+                <div className="text-xs text-slate-400">Playoffs</div>
+              </div>
+            )}
+            {stats.matchTypes.friendlyMatch > 0 && (
+              <div className="text-center p-3 bg-slate-800/50 rounded-lg">
+                <div className="text-2xl font-bold text-green-400">{stats.matchTypes.friendlyMatch}</div>
+                <div className="text-xs text-slate-400">Friendlies</div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Record Bar */}
       <div className="card p-4 sm:p-6">
@@ -156,15 +203,9 @@ export default function ClubStats({ stats, seasonalStats, matches }) {
         {/* Performance Chart */}
         {matchChartData.length > 0 && (
           <div className="card p-4 sm:p-6">
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-white">Recent Performance</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-white">Recent Goals</h3>
             <ResponsiveContainer width="100%" height={200} className="sm:!h-[250px]">
-              <AreaChart data={matchChartData}>
-                <defs>
-                  <linearGradient id="possGradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#06b6d4" stopOpacity={0.3} />
-                    <stop offset="95%" stopColor="#06b6d4" stopOpacity={0} />
-                  </linearGradient>
-                </defs>
+              <BarChart data={matchChartData}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
                 <XAxis dataKey="match" stroke="#64748b" tick={{ fontSize: 11 }} />
                 <YAxis stroke="#64748b" tick={{ fontSize: 11 }} />
@@ -175,48 +216,13 @@ export default function ClubStats({ stats, seasonalStats, matches }) {
                     borderRadius: '8px'
                   }}
                 />
-                <Area
-                  type="monotone"
-                  dataKey="possession"
-                  stroke="#06b6d4"
-                  fill="url(#possGradient)"
-                  name="Possession %"
-                />
-                <Bar dataKey="goals" fill="#22c55e" name="Goals" />
-              </AreaChart>
+                <Bar dataKey="goals" fill="#22c55e" name="Goals Scored" radius={[4, 4, 0, 0]} />
+              </BarChart>
             </ResponsiveContainer>
           </div>
         )}
       </div>
 
-      {/* Seasonal Stats */}
-      {seasonalStats && (
-        <div className="card p-4 sm:p-6">
-          <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-white">Current Season</h3>
-          <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 sm:gap-4">
-            <div className="text-center">
-              <div className="text-xl sm:text-2xl font-bold text-cyan-400">{seasonalStats.gamesPlayed || 0}</div>
-              <div className="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider mt-1">Games</div>
-            </div>
-            <div className="text-center">
-              <div className="text-xl sm:text-2xl font-bold text-green-400">{seasonalStats.wins || 0}</div>
-              <div className="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider mt-1">Wins</div>
-            </div>
-            <div className="text-center">
-              <div className="text-xl sm:text-2xl font-bold text-yellow-400">{seasonalStats.ties || 0}</div>
-              <div className="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider mt-1">Draws</div>
-            </div>
-            <div className="text-center">
-              <div className="text-xl sm:text-2xl font-bold text-red-400">{seasonalStats.losses || 0}</div>
-              <div className="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider mt-1">Losses</div>
-            </div>
-            <div className="text-center col-span-3 sm:col-span-1">
-              <div className="text-xl sm:text-2xl font-bold text-purple-400">{seasonalStats.goals || 0}</div>
-              <div className="text-[10px] sm:text-xs text-slate-400 uppercase tracking-wider mt-1">Goals</div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

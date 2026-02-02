@@ -1,0 +1,2826 @@
+{
+  "lastUpdated": "2026-02-02T18:29:58.418Z",
+  "totalClubs": 705,
+  "clubs": [
+    {
+      "id": "978015",
+      "name": "1 Mill Guinnes"
+    },
+    {
+      "id": "98135",
+      "name": "11 Team M8s"
+    },
+    {
+      "id": "544838",
+      "name": "13NRV"
+    },
+    {
+      "id": "416407",
+      "name": "187 Rasenband"
+    },
+    {
+      "id": "3445699",
+      "name": "2 man city"
+    },
+    {
+      "id": "2499806",
+      "name": "50 Pots"
+    },
+    {
+      "id": "161544",
+      "name": "9ToesJ"
+    },
+    {
+      "id": "1143",
+      "name": "AC Strenua"
+    },
+    {
+      "id": "342813",
+      "name": "ADANASPOR"
+    },
+    {
+      "id": "1528731",
+      "name": "Adept"
+    },
+    {
+      "id": "2336079",
+      "name": "Aero Esports"
+    },
+    {
+      "id": "11247",
+      "name": "AFC Ladzio"
+    },
+    {
+      "id": "39561",
+      "name": "AFC Ringside"
+    },
+    {
+      "id": "513095",
+      "name": "AFK Gatelag"
+    },
+    {
+      "id": "1953988",
+      "name": "African MudHut"
+    },
+    {
+      "id": "2528955",
+      "name": "africancity"
+    },
+    {
+      "id": "736586",
+      "name": "AfterHour eSp"
+    },
+    {
+      "id": "1765179",
+      "name": "akrapo 7"
+    },
+    {
+      "id": "131823",
+      "name": "All Stars 90s"
+    },
+    {
+      "id": "440606",
+      "name": "AllLegendary FC"
+    },
+    {
+      "id": "3103",
+      "name": "Allstars AFC"
+    },
+    {
+      "id": "943028",
+      "name": "Almtnakeen"
+    },
+    {
+      "id": "153054",
+      "name": "Amateur Kicker"
+    },
+    {
+      "id": "66373",
+      "name": "Amity"
+    },
+    {
+      "id": "1765802",
+      "name": "Amusedfox2TTV"
+    },
+    {
+      "id": "16206",
+      "name": "Anarchy FC"
+    },
+    {
+      "id": "23451",
+      "name": "Angry Wolves"
+    },
+    {
+      "id": "130141",
+      "name": "Annes Kebab"
+    },
+    {
+      "id": "32097",
+      "name": "another one"
+    },
+    {
+      "id": "738420",
+      "name": "ANSC Preußen"
+    },
+    {
+      "id": "2126347",
+      "name": "APEX CLAN"
+    },
+    {
+      "id": "1057451",
+      "name": "Ara Gaz Verme"
+    },
+    {
+      "id": "2585122",
+      "name": "arbeitsloser sv"
+    },
+    {
+      "id": "241",
+      "name": "Arkham city fc"
+    },
+    {
+      "id": "94259",
+      "name": "Ars et Labor"
+    },
+    {
+      "id": "87525",
+      "name": "ASA FC"
+    },
+    {
+      "id": "45915",
+      "name": "ASDA FC"
+    },
+    {
+      "id": "2057036",
+      "name": "Asil esports"
+    },
+    {
+      "id": "246533",
+      "name": "Asmo esports"
+    },
+    {
+      "id": "1801",
+      "name": "Athletic CF"
+    },
+    {
+      "id": "16918",
+      "name": "Athletic Reform"
+    },
+    {
+      "id": "378695",
+      "name": "Atus Velden"
+    },
+    {
+      "id": "1845477",
+      "name": "Aubagne Zoo"
+    },
+    {
+      "id": "3081339",
+      "name": "Austin stinks"
+    },
+    {
+      "id": "1899712",
+      "name": "aventador"
+    },
+    {
+      "id": "36264",
+      "name": "Average Albion"
+    },
+    {
+      "id": "111276",
+      "name": "Average at ÃeST"
+    },
+    {
+      "id": "84872",
+      "name": "B23 Amager B"
+    },
+    {
+      "id": "342761",
+      "name": "B2B SK"
+    },
+    {
+      "id": "16673",
+      "name": "B3ASTS FC"
+    },
+    {
+      "id": "1097651",
+      "name": "BaatMunchers"
+    },
+    {
+      "id": "7497",
+      "name": "BAD BOYS FC"
+    },
+    {
+      "id": "2227",
+      "name": "Baffins Rovers"
+    },
+    {
+      "id": "1162067",
+      "name": "bag a deal 2"
+    },
+    {
+      "id": "1714758",
+      "name": "Bamboo Shoots"
+    },
+    {
+      "id": "5126",
+      "name": "Banano eSports"
+    },
+    {
+      "id": "471652",
+      "name": "Banter Athletic"
+    },
+    {
+      "id": "1345179",
+      "name": "Basaksehir"
+    },
+    {
+      "id": "987856",
+      "name": "Basel XI"
+    },
+    {
+      "id": "890337",
+      "name": "Basse BK"
+    },
+    {
+      "id": "23266",
+      "name": "BattleForce"
+    },
+    {
+      "id": "23858",
+      "name": "BAU eSport"
+    },
+    {
+      "id": "24995",
+      "name": "BAYERN 80"
+    },
+    {
+      "id": "38035",
+      "name": "Bayern Munchies"
+    },
+    {
+      "id": "2269903",
+      "name": "BCs Army"
+    },
+    {
+      "id": "31724",
+      "name": "Beitarjerusalem"
+    },
+    {
+      "id": "285596",
+      "name": "Belief Me"
+    },
+    {
+      "id": "511081",
+      "name": "Belly United"
+    },
+    {
+      "id": "2716699",
+      "name": "benkers1"
+    },
+    {
+      "id": "2739514",
+      "name": "bens offenders"
+    },
+    {
+      "id": "50736",
+      "name": "Bigbelly Esp"
+    },
+    {
+      "id": "191502",
+      "name": "BiggishBulls FC"
+    },
+    {
+      "id": "1355588",
+      "name": "Binners United"
+    },
+    {
+      "id": "2214913",
+      "name": "Birmingham AFC"
+    },
+    {
+      "id": "34256",
+      "name": "BISIACS"
+    },
+    {
+      "id": "2076215",
+      "name": "Blackeagles x"
+    },
+    {
+      "id": "2662515",
+      "name": "Blackeagles x"
+    },
+    {
+      "id": "869118",
+      "name": "Blighty Boys FC"
+    },
+    {
+      "id": "202082",
+      "name": "BlinkyBlinders"
+    },
+    {
+      "id": "34771",
+      "name": "Bloodline G FC"
+    },
+    {
+      "id": "1207054",
+      "name": "BobbysBoys"
+    },
+    {
+      "id": "13915",
+      "name": "Booky Boys"
+    },
+    {
+      "id": "3233113",
+      "name": "Boon Raiders 3"
+    },
+    {
+      "id": "92686",
+      "name": "Born In Bolton"
+    },
+    {
+      "id": "41967",
+      "name": "Borstel Kickers"
+    },
+    {
+      "id": "1213426",
+      "name": "Borundibros P2"
+    },
+    {
+      "id": "325020",
+      "name": "Bøunâtà"
+    },
+    {
+      "id": "88607",
+      "name": "Box Crashers CF"
+    },
+    {
+      "id": "104227",
+      "name": "boys FCD"
+    },
+    {
+      "id": "920572",
+      "name": "boysbrigade65"
+    },
+    {
+      "id": "836519",
+      "name": "Boyscelona"
+    },
+    {
+      "id": "541550",
+      "name": "BP ICONS"
+    },
+    {
+      "id": "2088986",
+      "name": "Brabants eftal"
+    },
+    {
+      "id": "2505933",
+      "name": "Brothers UA"
+    },
+    {
+      "id": "1156273",
+      "name": "Bryggo"
+    },
+    {
+      "id": "90160",
+      "name": "Bulgarian Boys"
+    },
+    {
+      "id": "2350562",
+      "name": "Bumdr Boys"
+    },
+    {
+      "id": "8700",
+      "name": "Burnout"
+    },
+    {
+      "id": "119417",
+      "name": "Burst Gang"
+    },
+    {
+      "id": "23081",
+      "name": "Bushwackers FC"
+    },
+    {
+      "id": "1911233",
+      "name": "Buya Buya Eeeee"
+    },
+    {
+      "id": "2071451",
+      "name": "BVB1926NA"
+    },
+    {
+      "id": "19290",
+      "name": "BYZANT"
+    },
+    {
+      "id": "1127495",
+      "name": "CA CANNE FC"
+    },
+    {
+      "id": "45876",
+      "name": "Ca Parle Sport"
+    },
+    {
+      "id": "561609",
+      "name": "calipack2"
+    },
+    {
+      "id": "327450",
+      "name": "Calippo Cola"
+    },
+    {
+      "id": "38596",
+      "name": "CAMORA ES"
+    },
+    {
+      "id": "510571",
+      "name": "CashFlizzyFliz"
+    },
+    {
+      "id": "2742084",
+      "name": "Cazzata"
+    },
+    {
+      "id": "34340",
+      "name": "CD Nacional"
+    },
+    {
+      "id": "893",
+      "name": "CD Real Sport"
+    },
+    {
+      "id": "2531411",
+      "name": "CheshireEsports"
+    },
+    {
+      "id": "314188",
+      "name": "Chilenos LS"
+    },
+    {
+      "id": "1356921",
+      "name": "Chill Grill"
+    },
+    {
+      "id": "449794",
+      "name": "Chimp United"
+    },
+    {
+      "id": "1765228",
+      "name": "CHKON TFA Do"
+    },
+    {
+      "id": "795064",
+      "name": "Churchill Arms"
+    },
+    {
+      "id": "112133",
+      "name": "classico"
+    },
+    {
+      "id": "28189",
+      "name": "Club Italy"
+    },
+    {
+      "id": "1538927",
+      "name": "Clubs x"
+    },
+    {
+      "id": "2163",
+      "name": "Clutch Ravens"
+    },
+    {
+      "id": "2789416",
+      "name": "cmon21"
+    },
+    {
+      "id": "249283",
+      "name": "CMR BOYZ"
+    },
+    {
+      "id": "441361",
+      "name": "Cobayes De Labo"
+    },
+    {
+      "id": "1084077",
+      "name": "Collins Crusada"
+    },
+    {
+      "id": "1607734",
+      "name": "Colombia RTF"
+    },
+    {
+      "id": "162301",
+      "name": "Coloured Crew"
+    },
+    {
+      "id": "2032211",
+      "name": "Copacetic FC"
+    },
+    {
+      "id": "103391",
+      "name": "Cottbus Finest"
+    },
+    {
+      "id": "1888807",
+      "name": "CPG Czechia"
+    },
+    {
+      "id": "1984342",
+      "name": "CPG Wales FC"
+    },
+    {
+      "id": "7566",
+      "name": "Crumlin TW"
+    },
+    {
+      "id": "3400342",
+      "name": "CVL UTD"
+    },
+    {
+      "id": "2189365",
+      "name": "DARK CASTLE 3"
+    },
+    {
+      "id": "123588",
+      "name": "darsak7"
+    },
+    {
+      "id": "1741008",
+      "name": "DARTH V4DER FC"
+    },
+    {
+      "id": "14491",
+      "name": "DavsLads United"
+    },
+    {
+      "id": "7172",
+      "name": "DC Syndicates"
+    },
+    {
+      "id": "892",
+      "name": "Delboy United"
+    },
+    {
+      "id": "396401",
+      "name": "Deportivo Calvi"
+    },
+    {
+      "id": "82510",
+      "name": "DFR UNITED"
+    },
+    {
+      "id": "7783",
+      "name": "Die Falkenwacht"
+    },
+    {
+      "id": "533370",
+      "name": "Die Toni"
+    },
+    {
+      "id": "467141",
+      "name": "Dieu du stade"
+    },
+    {
+      "id": "158",
+      "name": "DIGITAL Sports"
+    },
+    {
+      "id": "26249",
+      "name": "Dirty ElevenKSE"
+    },
+    {
+      "id": "273169",
+      "name": "Dribbel"
+    },
+    {
+      "id": "4070",
+      "name": "DuivelseLeeuwen"
+    },
+    {
+      "id": "691687",
+      "name": "dvaaaa"
+    },
+    {
+      "id": "3353774",
+      "name": "Dyche Bol"
+    },
+    {
+      "id": "869535",
+      "name": "Echte Haberer"
+    },
+    {
+      "id": "2935532",
+      "name": "Eclipse"
+    },
+    {
+      "id": "211105",
+      "name": "EcossÃ©"
+    },
+    {
+      "id": "1248157",
+      "name": "Eddies Owls"
+    },
+    {
+      "id": "1538963",
+      "name": "ediking"
+    },
+    {
+      "id": "2456519",
+      "name": "Eintracht Trier"
+    },
+    {
+      "id": "393586",
+      "name": "Eire AFC"
+    },
+    {
+      "id": "304640",
+      "name": "EL Gaza"
+    },
+    {
+      "id": "490080",
+      "name": "Elbobbat"
+    },
+    {
+      "id": "1276754",
+      "name": "elite israel"
+    },
+    {
+      "id": "9459",
+      "name": "EliteBallers"
+    },
+    {
+      "id": "1348001",
+      "name": "EliteClubs"
+    },
+    {
+      "id": "1123391",
+      "name": "EliteProClubs"
+    },
+    {
+      "id": "1862908",
+      "name": "Eljoya Fc"
+    },
+    {
+      "id": "755068",
+      "name": "ElPolloLoco"
+    },
+    {
+      "id": "12984",
+      "name": "Eltham FC"
+    },
+    {
+      "id": "33575",
+      "name": "Empire City"
+    },
+    {
+      "id": "1176883",
+      "name": "EnjoadosFC26"
+    },
+    {
+      "id": "5635",
+      "name": "EnjoyX"
+    },
+    {
+      "id": "2000441",
+      "name": "Envy Esports"
+    },
+    {
+      "id": "128138",
+      "name": "EPIC LEGENDS"
+    },
+    {
+      "id": "2255719",
+      "name": "EPluribusUnum"
+    },
+    {
+      "id": "2094202",
+      "name": "Es Frettoise 2"
+    },
+    {
+      "id": "6532",
+      "name": "ESC 06"
+    },
+    {
+      "id": "2342583",
+      "name": "Escape2Victory"
+    },
+    {
+      "id": "529304",
+      "name": "Esmonoz"
+    },
+    {
+      "id": "1696396",
+      "name": "ETOILE Dz"
+    },
+    {
+      "id": "119592",
+      "name": "Europa Raptors"
+    },
+    {
+      "id": "2928",
+      "name": "EvolutionFc"
+    },
+    {
+      "id": "32893",
+      "name": "Excelsior"
+    },
+    {
+      "id": "2021815",
+      "name": "F C Boston"
+    },
+    {
+      "id": "76393",
+      "name": "fanum taxes"
+    },
+    {
+      "id": "536872",
+      "name": "Far west Fc"
+    },
+    {
+      "id": "770629",
+      "name": "FATPEOPLETEAM"
+    },
+    {
+      "id": "40299",
+      "name": "FC  5S"
+    },
+    {
+      "id": "517941",
+      "name": "FC Aarschot"
+    },
+    {
+      "id": "373502",
+      "name": "FC AIER LEKKEN"
+    },
+    {
+      "id": "90091",
+      "name": "FC Arbeitsloz"
+    },
+    {
+      "id": "493561",
+      "name": "Fc Armada"
+    },
+    {
+      "id": "43648",
+      "name": "FC Basel eSp"
+    },
+    {
+      "id": "3089481",
+      "name": "FC Brancafondi"
+    },
+    {
+      "id": "463220",
+      "name": "FC Bromuda"
+    },
+    {
+      "id": "1353582",
+      "name": "FC Dobrudzha"
+    },
+    {
+      "id": "103996",
+      "name": "FC DRAGOMER"
+    },
+    {
+      "id": "665300",
+      "name": "FC Drehlades 91"
+    },
+    {
+      "id": "42046",
+      "name": "Fc Elites"
+    },
+    {
+      "id": "634786",
+      "name": "Fc Elturco"
+    },
+    {
+      "id": "523826",
+      "name": "FC ENAC"
+    },
+    {
+      "id": "522018",
+      "name": "fc gang 67"
+    },
+    {
+      "id": "690139",
+      "name": "FC Goon Eleven"
+    },
+    {
+      "id": "376103",
+      "name": "FC HANAU 63"
+    },
+    {
+      "id": "997495",
+      "name": "FC HEROES"
+    },
+    {
+      "id": "1677485",
+      "name": "Fc Hodenfrisöre"
+    },
+    {
+      "id": "878419",
+      "name": "Fc Karamo Fc"
+    },
+    {
+      "id": "132536",
+      "name": "FC KLOIWATT"
+    },
+    {
+      "id": "976248",
+      "name": "FC Mentaliente"
+    },
+    {
+      "id": "1517147",
+      "name": "FC Nation"
+    },
+    {
+      "id": "219804",
+      "name": "FC NOORD"
+    },
+    {
+      "id": "2148698",
+      "name": "fc paprika"
+    },
+    {
+      "id": "38204",
+      "name": "FC Red Bulls"
+    },
+    {
+      "id": "2495078",
+      "name": "FC Reform GB"
+    },
+    {
+      "id": "100717",
+      "name": "FC Rooted"
+    },
+    {
+      "id": "88408",
+      "name": "FC Scaryhours"
+    },
+    {
+      "id": "41341",
+      "name": "FC SCHLIERE 89"
+    },
+    {
+      "id": "34134",
+      "name": "FC Seitlich Da"
+    },
+    {
+      "id": "121793",
+      "name": "FC Simple"
+    },
+    {
+      "id": "62887",
+      "name": "FC Streamer Utd"
+    },
+    {
+      "id": "5672",
+      "name": "FC SYL"
+    },
+    {
+      "id": "1124",
+      "name": "Fc Valletta"
+    },
+    {
+      "id": "73471",
+      "name": "FCAschaffenburg"
+    },
+    {
+      "id": "843505",
+      "name": "FcBallkani"
+    },
+    {
+      "id": "2148230",
+      "name": "FcFreaksUnited"
+    },
+    {
+      "id": "1822357",
+      "name": "FcKoper"
+    },
+    {
+      "id": "979221",
+      "name": "FCMontreuil"
+    },
+    {
+      "id": "2719655",
+      "name": "fenstanton"
+    },
+    {
+      "id": "592485",
+      "name": "FHKWFC"
+    },
+    {
+      "id": "286100",
+      "name": "Fiddle Football"
+    },
+    {
+      "id": "76990",
+      "name": "Flamingo eSport"
+    },
+    {
+      "id": "116237",
+      "name": "FlipperBoy"
+    },
+    {
+      "id": "500743",
+      "name": "Fortune Eleven"
+    },
+    {
+      "id": "2871008",
+      "name": "Freedom v"
+    },
+    {
+      "id": "2223100",
+      "name": "Freeform FC"
+    },
+    {
+      "id": "1857464",
+      "name": "Freising United"
+    },
+    {
+      "id": "150125",
+      "name": "Fruit Joot FC"
+    },
+    {
+      "id": "1088873",
+      "name": "Frydenbo United"
+    },
+    {
+      "id": "2368663",
+      "name": "FUR1A ESPORT"
+    },
+    {
+      "id": "1205",
+      "name": "Furia Esports"
+    },
+    {
+      "id": "352904",
+      "name": "G3ttoyut"
+    },
+    {
+      "id": "38203",
+      "name": "GALAXY 11"
+    },
+    {
+      "id": "58329",
+      "name": "Galaxy X"
+    },
+    {
+      "id": "2487254",
+      "name": "Gama no play"
+    },
+    {
+      "id": "304466",
+      "name": "Games G0ne FC"
+    },
+    {
+      "id": "291371",
+      "name": "Garys fc"
+    },
+    {
+      "id": "116160",
+      "name": "GaunerVonNauner"
+    },
+    {
+      "id": "1390055",
+      "name": "geespeas"
+    },
+    {
+      "id": "2179183",
+      "name": "Genc Icons"
+    },
+    {
+      "id": "43060",
+      "name": "GENCLERBIRLIGII"
+    },
+    {
+      "id": "515421",
+      "name": "Get Chunged FC"
+    },
+    {
+      "id": "1028082",
+      "name": "Giddy UP Cutz"
+    },
+    {
+      "id": "2547253",
+      "name": "GinnePoesPas"
+    },
+    {
+      "id": "96306",
+      "name": "GirthMasters FC"
+    },
+    {
+      "id": "340377",
+      "name": "Gladde Kearl"
+    },
+    {
+      "id": "202503",
+      "name": "Gloplysploge"
+    },
+    {
+      "id": "53197",
+      "name": "Goat Warriors"
+    },
+    {
+      "id": "526325",
+      "name": "Going Toulouse1"
+    },
+    {
+      "id": "90652",
+      "name": "GOLDEN BEAR"
+    },
+    {
+      "id": "1411776",
+      "name": "Green Eagle FC"
+    },
+    {
+      "id": "2647213",
+      "name": "Grote Duimpje"
+    },
+    {
+      "id": "272613",
+      "name": "Gruppenjisseln"
+    },
+    {
+      "id": "1333862",
+      "name": "GS Samen Rijk"
+    },
+    {
+      "id": "1655",
+      "name": "GSK Esport"
+    },
+    {
+      "id": "1627230",
+      "name": "Haalu Belun FC"
+    },
+    {
+      "id": "831982",
+      "name": "Halal Esports"
+    },
+    {
+      "id": "39462",
+      "name": "Hamsi FK"
+    },
+    {
+      "id": "887150",
+      "name": "Hans Zimmer FC"
+    },
+    {
+      "id": "85239",
+      "name": "Hapoel Marmorek"
+    },
+    {
+      "id": "20675",
+      "name": "Harrys U5s"
+    },
+    {
+      "id": "2827056",
+      "name": "Hasta Town"
+    },
+    {
+      "id": "34768",
+      "name": "Hatayspor"
+    },
+    {
+      "id": "2300",
+      "name": "Helvetic WRS"
+    },
+    {
+      "id": "6882",
+      "name": "Here for fun"
+    },
+    {
+      "id": "14432",
+      "name": "Herenclubje"
+    },
+    {
+      "id": "102495",
+      "name": "Hiltifigger187"
+    },
+    {
+      "id": "339690",
+      "name": "HOC XI"
+    },
+    {
+      "id": "823868",
+      "name": "Hogwarts XI"
+    },
+    {
+      "id": "222450",
+      "name": "Hokkuh FC"
+    },
+    {
+      "id": "236160",
+      "name": "Hollywood CF"
+    },
+    {
+      "id": "147927",
+      "name": "Holy Saints"
+    },
+    {
+      "id": "98154",
+      "name": "Hometown51"
+    },
+    {
+      "id": "386633",
+      "name": "Hong Boys"
+    },
+    {
+      "id": "2417282",
+      "name": "HOP HOP FC"
+    },
+    {
+      "id": "497087",
+      "name": "Hoppaaa Utd"
+    },
+    {
+      "id": "662093",
+      "name": "Hornchurch Utd"
+    },
+    {
+      "id": "1072",
+      "name": "Hornets CF"
+    },
+    {
+      "id": "1333",
+      "name": "HostileTakeover"
+    },
+    {
+      "id": "878507",
+      "name": "I GRAVITY IF I"
+    },
+    {
+      "id": "200791",
+      "name": "IBS FIBjes"
+    },
+    {
+      "id": "1974663",
+      "name": "idhleonTTV"
+    },
+    {
+      "id": "278385",
+      "name": "iipugento"
+    },
+    {
+      "id": "365980",
+      "name": "ILLYRIANS BLOOD"
+    },
+    {
+      "id": "189640",
+      "name": "Impact Boys"
+    },
+    {
+      "id": "88479",
+      "name": "Impulsive"
+    },
+    {
+      "id": "11838",
+      "name": "Inazuma XI"
+    },
+    {
+      "id": "122414",
+      "name": "Inferno XI"
+    },
+    {
+      "id": "1724395",
+      "name": "Inpulse Esports"
+    },
+    {
+      "id": "2923947",
+      "name": "Intellect  AFC"
+    },
+    {
+      "id": "1951178",
+      "name": "Inter Bucuresti"
+    },
+    {
+      "id": "6465",
+      "name": "INTER STRIT"
+    },
+    {
+      "id": "55483",
+      "name": "INTERGALACTIQUE"
+    },
+    {
+      "id": "201573",
+      "name": "Invadhers FC"
+    },
+    {
+      "id": "2832",
+      "name": "Invicta"
+    },
+    {
+      "id": "101113",
+      "name": "Irish Athletes"
+    },
+    {
+      "id": "21588",
+      "name": "IThith UTD"
+    },
+    {
+      "id": "157706",
+      "name": "jantjes fc"
+    },
+    {
+      "id": "2177541",
+      "name": "Jeziorak Esport"
+    },
+    {
+      "id": "24917",
+      "name": "JOHNSLENNONS"
+    },
+    {
+      "id": "124077",
+      "name": "Johnson FC"
+    },
+    {
+      "id": "33549",
+      "name": "Joses Bus"
+    },
+    {
+      "id": "197469",
+      "name": "Kagaway"
+    },
+    {
+      "id": "1922275",
+      "name": "Kaidhi11"
+    },
+    {
+      "id": "1125629",
+      "name": "kall korvar"
+    },
+    {
+      "id": "81685",
+      "name": "Karkara Union"
+    },
+    {
+      "id": "4657",
+      "name": "karmiel"
+    },
+    {
+      "id": "1862",
+      "name": "kelev yam 2"
+    },
+    {
+      "id": "437141",
+      "name": "kendrick cf"
+    },
+    {
+      "id": "37684",
+      "name": "KFC Chicken FC"
+    },
+    {
+      "id": "7947",
+      "name": "Kielersprotten"
+    },
+    {
+      "id": "134808",
+      "name": "KiKa KinderK"
+    },
+    {
+      "id": "85493",
+      "name": "Killyz"
+    },
+    {
+      "id": "327597",
+      "name": "KimetsuNoYaiba"
+    },
+    {
+      "id": "2640790",
+      "name": "kirks magic"
+    },
+    {
+      "id": "2048400",
+      "name": "KitKatKrew"
+    },
+    {
+      "id": "3306458",
+      "name": "Kiwi Head FC"
+    },
+    {
+      "id": "2506796",
+      "name": "Klein Duimpje"
+    },
+    {
+      "id": "404134",
+      "name": "Kleinparis SG"
+    },
+    {
+      "id": "1922436",
+      "name": "Königs Wildau"
+    },
+    {
+      "id": "3346932",
+      "name": "KoudeKletser"
+    },
+    {
+      "id": "62039",
+      "name": "KryddorNSommar"
+    },
+    {
+      "id": "2998336",
+      "name": "L7 eSports"
+    },
+    {
+      "id": "3724374",
+      "name": "LÃ  SÃLÂ§Ã"
+    },
+    {
+      "id": "2276079",
+      "name": "La tortuga"
+    },
+    {
+      "id": "43437",
+      "name": "LAB FC"
+    },
+    {
+      "id": "294855",
+      "name": "Lachs United"
+    },
+    {
+      "id": "496426",
+      "name": "Ladz 0n Tour"
+    },
+    {
+      "id": "3422806",
+      "name": "Lasphynx ESP"
+    },
+    {
+      "id": "207827",
+      "name": "Lasphynx FC"
+    },
+    {
+      "id": "310802",
+      "name": "Last Dance Utd"
+    },
+    {
+      "id": "1207",
+      "name": "Last Empire"
+    },
+    {
+      "id": "3076051",
+      "name": "Last Stand V2"
+    },
+    {
+      "id": "386444",
+      "name": "Le Goonrs"
+    },
+    {
+      "id": "2096425",
+      "name": "Lee Bells Army"
+    },
+    {
+      "id": "2232561",
+      "name": "LEGACY OF LIONS"
+    },
+    {
+      "id": "104300",
+      "name": "Leichenspritzer"
+    },
+    {
+      "id": "47718",
+      "name": "Lekker Maf Doen"
+    },
+    {
+      "id": "175212",
+      "name": "Les Patriotes"
+    },
+    {
+      "id": "151081",
+      "name": "Level Up x NL"
+    },
+    {
+      "id": "3411027",
+      "name": "Light Work UTD"
+    },
+    {
+      "id": "301289",
+      "name": "Lil Lipton Tids"
+    },
+    {
+      "id": "28305",
+      "name": "Lokomotiv Follo"
+    },
+    {
+      "id": "213082",
+      "name": "LondonFC 2025"
+    },
+    {
+      "id": "301284",
+      "name": "Los Pablos CF"
+    },
+    {
+      "id": "427920",
+      "name": "LOS POLLOS ES"
+    },
+    {
+      "id": "174020",
+      "name": "Los Rayos"
+    },
+    {
+      "id": "104885",
+      "name": "LoveOfTheGameFC"
+    },
+    {
+      "id": "1622325",
+      "name": "Low Society"
+    },
+    {
+      "id": "471250",
+      "name": "LSI PROs"
+    },
+    {
+      "id": "6364",
+      "name": "lupacchiottitv"
+    },
+    {
+      "id": "1899892",
+      "name": "LWG ATLANTA"
+    },
+    {
+      "id": "548937",
+      "name": "Lysdexic Terard"
+    },
+    {
+      "id": "1925710",
+      "name": "M1DLANDS UN1T3D"
+    },
+    {
+      "id": "2474976",
+      "name": "M4STERS FC"
+    },
+    {
+      "id": "27561",
+      "name": "MA3SOOB FC"
+    },
+    {
+      "id": "2257107",
+      "name": "Maccabi Atlit 2"
+    },
+    {
+      "id": "2533724",
+      "name": "Madras XI"
+    },
+    {
+      "id": "371105",
+      "name": "Madrid Esports"
+    },
+    {
+      "id": "1538679",
+      "name": "MAFIA DZ ESP"
+    },
+    {
+      "id": "2760102",
+      "name": "Mandam Society"
+    },
+    {
+      "id": "439985",
+      "name": "Mandem  FC    l"
+    },
+    {
+      "id": "495292",
+      "name": "Mansfield ES"
+    },
+    {
+      "id": "883788",
+      "name": "MARC IN LEANNE"
+    },
+    {
+      "id": "291450",
+      "name": "Matcha FC"
+    },
+    {
+      "id": "105747",
+      "name": "MattressMick FC"
+    },
+    {
+      "id": "2833394",
+      "name": "MauledBy Tigers"
+    },
+    {
+      "id": "1762363",
+      "name": "Mendeksy"
+    },
+    {
+      "id": "198451",
+      "name": "MensOfTheCities"
+    },
+    {
+      "id": "3410840",
+      "name": "mexicanCartel 1"
+    },
+    {
+      "id": "1815",
+      "name": "MGT ESPORT"
+    },
+    {
+      "id": "1579765",
+      "name": "Miami ESP"
+    },
+    {
+      "id": "1004",
+      "name": "Miami Esports"
+    },
+    {
+      "id": "1820907",
+      "name": "Michael Academy"
+    },
+    {
+      "id": "49686",
+      "name": "Midnight Club"
+    },
+    {
+      "id": "180597",
+      "name": "MIDNIMO CLUB"
+    },
+    {
+      "id": "328",
+      "name": "Milano esports"
+    },
+    {
+      "id": "43864",
+      "name": "Miss Lowes U12s"
+    },
+    {
+      "id": "128492",
+      "name": "Misunderstood"
+    },
+    {
+      "id": "843881",
+      "name": "MontyShow"
+    },
+    {
+      "id": "74378",
+      "name": "Morley AFC"
+    },
+    {
+      "id": "193",
+      "name": "My Daddy and Me"
+    },
+    {
+      "id": "183203",
+      "name": "Net Six"
+    },
+    {
+      "id": "470088",
+      "name": "Neubrandenburg"
+    },
+    {
+      "id": "1489823",
+      "name": "Neusje vd Zalm"
+    },
+    {
+      "id": "243721",
+      "name": "Neverlusen Fc"
+    },
+    {
+      "id": "6300",
+      "name": "New Horizon"
+    },
+    {
+      "id": "2193",
+      "name": "New Team Ticino"
+    },
+    {
+      "id": "594882",
+      "name": "Newham Warriors"
+    },
+    {
+      "id": "738060",
+      "name": "NEXUM FC"
+    },
+    {
+      "id": "1320",
+      "name": "Nexus Esport"
+    },
+    {
+      "id": "29824",
+      "name": "Nile eSports"
+    },
+    {
+      "id": "55508",
+      "name": "NLD fc"
+    },
+    {
+      "id": "1263898",
+      "name": "No Ben FC"
+    },
+    {
+      "id": "2493996",
+      "name": "non blazers afc"
+    },
+    {
+      "id": "27785",
+      "name": "Nordavind"
+    },
+    {
+      "id": "26062",
+      "name": "Norfoot"
+    },
+    {
+      "id": "3091353",
+      "name": "North Esports"
+    },
+    {
+      "id": "7269",
+      "name": "North Sharks"
+    },
+    {
+      "id": "198091",
+      "name": "NorthLondon4Eva"
+    },
+    {
+      "id": "2596",
+      "name": "NOT ELITE FC"
+    },
+    {
+      "id": "720173",
+      "name": "Notts Ballers"
+    },
+    {
+      "id": "610687",
+      "name": "Notzingen AH"
+    },
+    {
+      "id": "2213669",
+      "name": "NOVA ESPORTS1"
+    },
+    {
+      "id": "2854572",
+      "name": "NX11 Esp"
+    },
+    {
+      "id": "29865",
+      "name": "Oakgrove FC"
+    },
+    {
+      "id": "82335",
+      "name": "Odyssey eSports"
+    },
+    {
+      "id": "1180551",
+      "name": "oGER eSports"
+    },
+    {
+      "id": "1883580",
+      "name": "Ola Blou"
+    },
+    {
+      "id": "3545",
+      "name": "Old Boys Berlin"
+    },
+    {
+      "id": "2661494",
+      "name": "oli is bad"
+    },
+    {
+      "id": "9289",
+      "name": "OM ESPORTS"
+    },
+    {
+      "id": "8690",
+      "name": "One Touch"
+    },
+    {
+      "id": "43749",
+      "name": "OneMoreFc"
+    },
+    {
+      "id": "118072",
+      "name": "ONEMOVE B"
+    },
+    {
+      "id": "3153939",
+      "name": "OnlyFÃ n FC"
+    },
+    {
+      "id": "1426286",
+      "name": "Op de set"
+    },
+    {
+      "id": "4023",
+      "name": "Orange Mechanic"
+    },
+    {
+      "id": "2447992",
+      "name": "Otf117"
+    },
+    {
+      "id": "1623564",
+      "name": "Overkill Esp"
+    },
+    {
+      "id": "1047439",
+      "name": "P R I M E"
+    },
+    {
+      "id": "7870",
+      "name": "Palermo C5 eSp"
+    },
+    {
+      "id": "219012",
+      "name": "PASSE LA SPHERE"
+    },
+    {
+      "id": "20453",
+      "name": "Passion"
+    },
+    {
+      "id": "36386",
+      "name": "PCIFIC ESPORTS"
+    },
+    {
+      "id": "464256",
+      "name": "Phantom Allstar"
+    },
+    {
+      "id": "3722103",
+      "name": "PHANTOM EsPORTS"
+    },
+    {
+      "id": "2431073",
+      "name": "PhantomElite"
+    },
+    {
+      "id": "1759512",
+      "name": "PhantomX1"
+    },
+    {
+      "id": "55773",
+      "name": "Phoenix City CF"
+    },
+    {
+      "id": "84198",
+      "name": "Phoenix Fire"
+    },
+    {
+      "id": "14420",
+      "name": "Phoenix Runners"
+    },
+    {
+      "id": "2344278",
+      "name": "Pietje Puk"
+    },
+    {
+      "id": "416011",
+      "name": "Pingu x"
+    },
+    {
+      "id": "3722480",
+      "name": "Pints B4 Points"
+    },
+    {
+      "id": "458689",
+      "name": "PIPE DOWN FC"
+    },
+    {
+      "id": "5828",
+      "name": "Pique Blinders"
+    },
+    {
+      "id": "40743",
+      "name": "Pirate Esport"
+    },
+    {
+      "id": "1697",
+      "name": "Pizzastars"
+    },
+    {
+      "id": "489859",
+      "name": "Planet Football"
+    },
+    {
+      "id": "172629",
+      "name": "plungers fc"
+    },
+    {
+      "id": "51451",
+      "name": "Pluribus Unum"
+    },
+    {
+      "id": "695777",
+      "name": "PNM CF"
+    },
+    {
+      "id": "2155475",
+      "name": "Poetic x"
+    },
+    {
+      "id": "141628",
+      "name": "Poppa Woody"
+    },
+    {
+      "id": "270983",
+      "name": "Popping Peggys"
+    },
+    {
+      "id": "5098",
+      "name": "Poskin FC"
+    },
+    {
+      "id": "83415",
+      "name": "Poundz Esports"
+    },
+    {
+      "id": "544873",
+      "name": "PoWRRR"
+    },
+    {
+      "id": "21007",
+      "name": "PRYME THYME"
+    },
+    {
+      "id": "196363",
+      "name": "Psv AyidÃ¶ven"
+    },
+    {
+      "id": "240617",
+      "name": "PumSlayers UTD"
+    },
+    {
+      "id": "2721218",
+      "name": "Purdys Piegons"
+    },
+    {
+      "id": "617038",
+      "name": "pure poep"
+    },
+    {
+      "id": "473722",
+      "name": "Purple Waki FC"
+    },
+    {
+      "id": "24997",
+      "name": "Puyolkeksdown"
+    },
+    {
+      "id": "36516",
+      "name": "PWagon Chicknug"
+    },
+    {
+      "id": "539002",
+      "name": "QPR eSports"
+    },
+    {
+      "id": "511275",
+      "name": "Queans11"
+    },
+    {
+      "id": "1786872",
+      "name": "QueLaBR"
+    },
+    {
+      "id": "1086731",
+      "name": "Quick Boys 31"
+    },
+    {
+      "id": "10389",
+      "name": "Quinas Club"
+    },
+    {
+      "id": "43077",
+      "name": "Quöllfrisch FC"
+    },
+    {
+      "id": "2005705",
+      "name": "R4P Academy"
+    },
+    {
+      "id": "86707",
+      "name": "rabin hafsakot"
+    },
+    {
+      "id": "31738",
+      "name": "RAMBO ARMY"
+    },
+    {
+      "id": "217847",
+      "name": "Rath Rivers"
+    },
+    {
+      "id": "428944",
+      "name": "razzas"
+    },
+    {
+      "id": "2938487",
+      "name": "Real Inazuma"
+    },
+    {
+      "id": "388996",
+      "name": "REALMAGIC"
+    },
+    {
+      "id": "122562",
+      "name": "Reals EsportS"
+    },
+    {
+      "id": "1887192",
+      "name": "Record It"
+    },
+    {
+      "id": "280767",
+      "name": "Red Bull Lazy"
+    },
+    {
+      "id": "88790",
+      "name": "RedLightning AC"
+    },
+    {
+      "id": "223082",
+      "name": "Redwood Rovers"
+    },
+    {
+      "id": "740935",
+      "name": "Rejsningsholdet"
+    },
+    {
+      "id": "6307",
+      "name": "RELICS UNITED"
+    },
+    {
+      "id": "6988",
+      "name": "Renaissance"
+    },
+    {
+      "id": "45959",
+      "name": "RepresentXI"
+    },
+    {
+      "id": "2336213",
+      "name": "Resurged XI"
+    },
+    {
+      "id": "1314777",
+      "name": "Retired 020"
+    },
+    {
+      "id": "517121",
+      "name": "RETURNERS"
+    },
+    {
+      "id": "2390",
+      "name": "Rev Gaming"
+    },
+    {
+      "id": "72419",
+      "name": "Revival of LAF"
+    },
+    {
+      "id": "134519",
+      "name": "Rip big DOMM"
+    },
+    {
+      "id": "3259891",
+      "name": "RIP Critics FC"
+    },
+    {
+      "id": "1537900",
+      "name": "road trip yh yh"
+    },
+    {
+      "id": "1318",
+      "name": "Rooster Cannons"
+    },
+    {
+      "id": "19562",
+      "name": "Route one FC"
+    },
+    {
+      "id": "148307",
+      "name": "ROYAL  ACADEMIE"
+    },
+    {
+      "id": "4419",
+      "name": "Royal Knights"
+    },
+    {
+      "id": "2402843",
+      "name": "Royale Elite"
+    },
+    {
+      "id": "1043150",
+      "name": "Royals eSports"
+    },
+    {
+      "id": "527565",
+      "name": "RRC E Sports"
+    },
+    {
+      "id": "37131",
+      "name": "RUFC eSports"
+    },
+    {
+      "id": "1798",
+      "name": "Rugby Rovers"
+    },
+    {
+      "id": "2202823",
+      "name": "Rullebör Lart"
+    },
+    {
+      "id": "8591",
+      "name": "rumun athletic"
+    },
+    {
+      "id": "10954",
+      "name": "Rusconis"
+    },
+    {
+      "id": "82142",
+      "name": "Rusty Piano"
+    },
+    {
+      "id": "7725",
+      "name": "RWA eSports"
+    },
+    {
+      "id": "474534",
+      "name": "Sacred Oath"
+    },
+    {
+      "id": "569448",
+      "name": "Salahudin CF"
+    },
+    {
+      "id": "3339509",
+      "name": "SaltyTikiTapas"
+    },
+    {
+      "id": "1575910",
+      "name": "San Delta West"
+    },
+    {
+      "id": "130531",
+      "name": "SavinChemo"
+    },
+    {
+      "id": "2014833",
+      "name": "SC Persia"
+    },
+    {
+      "id": "223474",
+      "name": "Schartenfarters"
+    },
+    {
+      "id": "14853",
+      "name": "SDIbiza eSports"
+    },
+    {
+      "id": "2311280",
+      "name": "SE  Dons"
+    },
+    {
+      "id": "42212",
+      "name": "Seagulls fc"
+    },
+    {
+      "id": "1280585",
+      "name": "SeasidersUnited"
+    },
+    {
+      "id": "1459",
+      "name": "Seazon"
+    },
+    {
+      "id": "26029",
+      "name": "SecretSkillz CF"
+    },
+    {
+      "id": "1883482",
+      "name": "SEN ESPORT"
+    },
+    {
+      "id": "29298",
+      "name": "Sesko Fender"
+    },
+    {
+      "id": "22588",
+      "name": "Set Pace FC"
+    },
+    {
+      "id": "106901",
+      "name": "SFL Yazaballerz"
+    },
+    {
+      "id": "2233654",
+      "name": "SFLHavocDynasty"
+    },
+    {
+      "id": "2235",
+      "name": "Shaijebdhjas"
+    },
+    {
+      "id": "6110",
+      "name": "Sham Fc"
+    },
+    {
+      "id": "2264201",
+      "name": "Shani Esports"
+    },
+    {
+      "id": "391417",
+      "name": "Shao lisses"
+    },
+    {
+      "id": "2503834",
+      "name": "SHAW SQUAD 2"
+    },
+    {
+      "id": "769194",
+      "name": "Sheeps XI"
+    },
+    {
+      "id": "454612",
+      "name": "Shengki Ballers"
+    },
+    {
+      "id": "1100052",
+      "name": "shire boy3"
+    },
+    {
+      "id": "5777",
+      "name": "Shrewsbury"
+    },
+    {
+      "id": "358125",
+      "name": "Silent Monks"
+    },
+    {
+      "id": "3140556",
+      "name": "SizzySchlags"
+    },
+    {
+      "id": "39780",
+      "name": "SkillsHub"
+    },
+    {
+      "id": "883888",
+      "name": "Slemmestad if"
+    },
+    {
+      "id": "86948",
+      "name": "Slide City"
+    },
+    {
+      "id": "74140",
+      "name": "SLIMANE"
+    },
+    {
+      "id": "621373",
+      "name": "SlottedYeDog"
+    },
+    {
+      "id": "1488650",
+      "name": "Smeags XI"
+    },
+    {
+      "id": "26199",
+      "name": "Smelly Ones"
+    },
+    {
+      "id": "2344251",
+      "name": "SMESH2"
+    },
+    {
+      "id": "3213085",
+      "name": "smile 4 the cam"
+    },
+    {
+      "id": "85113",
+      "name": "Smokin Nchillin"
+    },
+    {
+      "id": "288217",
+      "name": "Snabba FC"
+    },
+    {
+      "id": "2220591",
+      "name": "sniffmeister"
+    },
+    {
+      "id": "554740",
+      "name": "SNOW RAIDERS"
+    },
+    {
+      "id": "1849034",
+      "name": "SoggyDigestive"
+    },
+    {
+      "id": "21268",
+      "name": "SÖÖR UNITED"
+    },
+    {
+      "id": "1093563",
+      "name": "SoSo XI"
+    },
+    {
+      "id": "802516",
+      "name": "South LDN"
+    },
+    {
+      "id": "2429466",
+      "name": "Spellbrook"
+    },
+    {
+      "id": "29568",
+      "name": "Spice CF"
+    },
+    {
+      "id": "411614",
+      "name": "ssv Baller1887"
+    },
+    {
+      "id": "40980",
+      "name": "SSV Ulm"
+    },
+    {
+      "id": "7313",
+      "name": "STHLM Saints"
+    },
+    {
+      "id": "2380081",
+      "name": "Stonefield City"
+    },
+    {
+      "id": "683008",
+      "name": "StreetyMateTT"
+    },
+    {
+      "id": "1149160",
+      "name": "Strong Jumbo"
+    },
+    {
+      "id": "640959",
+      "name": "Sui Chat FC"
+    },
+    {
+      "id": "298884",
+      "name": "Sunshine ßus FC"
+    },
+    {
+      "id": "68461",
+      "name": "Super Dernek"
+    },
+    {
+      "id": "451501",
+      "name": "Svarte Ape FC"
+    },
+    {
+      "id": "231991",
+      "name": "SVWellenbrecher"
+    },
+    {
+      "id": "237585",
+      "name": "Swall Seagulls"
+    },
+    {
+      "id": "196055",
+      "name": "Sweat FactoryFC"
+    },
+    {
+      "id": "2173",
+      "name": "Symphony"
+    },
+    {
+      "id": "86146",
+      "name": "Tabia Mbovou"
+    },
+    {
+      "id": "105624",
+      "name": "TACAPES"
+    },
+    {
+      "id": "86779",
+      "name": "Tactical OP"
+    },
+    {
+      "id": "26698",
+      "name": "Tap in FC 2"
+    },
+    {
+      "id": "3218399",
+      "name": "Tartan Athletic"
+    },
+    {
+      "id": "265189",
+      "name": "Team 973"
+    },
+    {
+      "id": "11673",
+      "name": "Team Aurora"
+    },
+    {
+      "id": "2048206",
+      "name": "Team MLT"
+    },
+    {
+      "id": "59148",
+      "name": "Tekosta Cafe"
+    },
+    {
+      "id": "2506859",
+      "name": "testgurke"
+    },
+    {
+      "id": "2605409",
+      "name": "Thanks"
+    },
+    {
+      "id": "557116",
+      "name": "The Availables"
+    },
+    {
+      "id": "53843",
+      "name": "THE BEST DUO"
+    },
+    {
+      "id": "663263",
+      "name": "The Blues90"
+    },
+    {
+      "id": "2379712",
+      "name": "THE BRUCERS"
+    },
+    {
+      "id": "2013793",
+      "name": "The Dave Mandem"
+    },
+    {
+      "id": "2703854",
+      "name": "The GOON3R"
+    },
+    {
+      "id": "999228",
+      "name": "THE HOLY GRAIL"
+    },
+    {
+      "id": "138880",
+      "name": "the hot scots"
+    },
+    {
+      "id": "4121",
+      "name": "The Separatists"
+    },
+    {
+      "id": "20342",
+      "name": "The Skis"
+    },
+    {
+      "id": "966224",
+      "name": "The Top Divs"
+    },
+    {
+      "id": "1709401",
+      "name": "The Uncss FC"
+    },
+    {
+      "id": "673736",
+      "name": "The Vozarikovas"
+    },
+    {
+      "id": "134709",
+      "name": "TheGoldenEffect"
+    },
+    {
+      "id": "2829258",
+      "name": "TheHarlowHelmet"
+    },
+    {
+      "id": "342443",
+      "name": "Tiger Ding"
+    },
+    {
+      "id": "25790",
+      "name": "Tigres"
+    },
+    {
+      "id": "3083277",
+      "name": "tiki xx"
+    },
+    {
+      "id": "798964",
+      "name": "TilburgFC"
+    },
+    {
+      "id": "2128350",
+      "name": "tipico törken"
+    },
+    {
+      "id": "1392512",
+      "name": "tissm fcc"
+    },
+    {
+      "id": "327620",
+      "name": "Torment"
+    },
+    {
+      "id": "5959",
+      "name": "Total Control"
+    },
+    {
+      "id": "15703",
+      "name": "Tough Cookies"
+    },
+    {
+      "id": "15495",
+      "name": "TrailerParkBoys"
+    },
+    {
+      "id": "1631809",
+      "name": "Trianglez"
+    },
+    {
+      "id": "2697404",
+      "name": "Trickyy"
+    },
+    {
+      "id": "4358",
+      "name": "Trinant AFC"
+    },
+    {
+      "id": "928441",
+      "name": "TT United"
+    },
+    {
+      "id": "1740040",
+      "name": "tublas"
+    },
+    {
+      "id": "92486",
+      "name": "Ulep Zgierz"
+    },
+    {
+      "id": "1795538",
+      "name": "Ultrasgs"
+    },
+    {
+      "id": "1598675",
+      "name": "UMiversum"
+    },
+    {
+      "id": "547809",
+      "name": "Unexpected"
+    },
+    {
+      "id": "47811",
+      "name": "united ballerz"
+    },
+    {
+      "id": "2025543",
+      "name": "Unkown XI"
+    },
+    {
+      "id": "2954776",
+      "name": "Up The Gers"
+    },
+    {
+      "id": "39037",
+      "name": "Urban Warriors"
+    },
+    {
+      "id": "1762456",
+      "name": "USMA ESPORTS"
+    },
+    {
+      "id": "3403089",
+      "name": "V0ID FC"
+    },
+    {
+      "id": "3716",
+      "name": "VantageFootball"
+    },
+    {
+      "id": "2311979",
+      "name": "vanti fc"
+    },
+    {
+      "id": "2353154",
+      "name": "VC GALACTICOS"
+    },
+    {
+      "id": "361",
+      "name": "Velocity X"
+    },
+    {
+      "id": "196222",
+      "name": "Velvet Ath"
+    },
+    {
+      "id": "403765",
+      "name": "Verdansk XI"
+    },
+    {
+      "id": "936776",
+      "name": "VERIFIED CLUB"
+    },
+    {
+      "id": "472527",
+      "name": "VFAM FC"
+    },
+    {
+      "id": "2562144",
+      "name": "VFC Corvinul"
+    },
+    {
+      "id": "2427",
+      "name": "VFC Crystall"
+    },
+    {
+      "id": "1548119",
+      "name": "VFL AIK"
+    },
+    {
+      "id": "721192",
+      "name": "VFL Ajax"
+    },
+    {
+      "id": "410185",
+      "name": "VFL Arsenal"
+    },
+    {
+      "id": "420390",
+      "name": "VFL Aston Villa"
+    },
+    {
+      "id": "2585927",
+      "name": "VFL Bilbao"
+    },
+    {
+      "id": "632652",
+      "name": "VFL Blackburn"
+    },
+    {
+      "id": "723675",
+      "name": "VFL Boca"
+    },
+    {
+      "id": "2078953",
+      "name": "VFL Bourndaland"
+    },
+    {
+      "id": "831971",
+      "name": "Vfl Bournemouth"
+    },
+    {
+      "id": "535682",
+      "name": "VFL Bristol"
+    },
+    {
+      "id": "671941",
+      "name": "VFL Col Utd"
+    },
+    {
+      "id": "3183716",
+      "name": "VFL Como 1907"
+    },
+    {
+      "id": "2541138",
+      "name": "VFL Coventry"
+    },
+    {
+      "id": "2530595",
+      "name": "VFL Dundee FC"
+    },
+    {
+      "id": "2638042",
+      "name": "VFL DundeeUTD"
+    },
+    {
+      "id": "3616",
+      "name": "VFL Elche CF"
+    },
+    {
+      "id": "1014044",
+      "name": "VFL Fulham"
+    },
+    {
+      "id": "1762758",
+      "name": "VFL ITFC"
+    },
+    {
+      "id": "1220",
+      "name": "vfl Las Palmas"
+    },
+    {
+      "id": "879709",
+      "name": "VFL Malaga"
+    },
+    {
+      "id": "415481",
+      "name": "VFL Man City"
+    },
+    {
+      "id": "516655",
+      "name": "VFL Montpellier"
+    },
+    {
+      "id": "2180224",
+      "name": "VFL Oxford"
+    },
+    {
+      "id": "15816",
+      "name": "VFL Poland"
+    },
+    {
+      "id": "766697",
+      "name": "VFL PSV"
+    },
+    {
+      "id": "497595",
+      "name": "VFL Rotherham"
+    },
+    {
+      "id": "3455267",
+      "name": "VFL Salop"
+    },
+    {
+      "id": "430031",
+      "name": "VFL Schalke 04"
+    },
+    {
+      "id": "3346705",
+      "name": "VFL Slovenia"
+    },
+    {
+      "id": "1555443",
+      "name": "VFL SPARTA"
+    },
+    {
+      "id": "515211",
+      "name": "VFL St Pauli"
+    },
+    {
+      "id": "2321489",
+      "name": "VFL Swansea"
+    },
+    {
+      "id": "2261318",
+      "name": "VFL Trabzonspor"
+    },
+    {
+      "id": "2473534",
+      "name": "VFL Verl"
+    },
+    {
+      "id": "2525824",
+      "name": "VFLBesiktas"
+    },
+    {
+      "id": "1936719",
+      "name": "VFLSheffieldUTD"
+    },
+    {
+      "id": "2074366",
+      "name": "Vikings Esports"
+    },
+    {
+      "id": "879449",
+      "name": "Vindimas FC"
+    },
+    {
+      "id": "1150",
+      "name": "VINLAND ESPORTS"
+    },
+    {
+      "id": "2335446",
+      "name": "Vinyl"
+    },
+    {
+      "id": "2020927",
+      "name": "VIRTUOSO ESP"
+    },
+    {
+      "id": "2026752",
+      "name": "Visionaries ES"
+    },
+    {
+      "id": "120479",
+      "name": "Vleessie FC"
+    },
+    {
+      "id": "414533",
+      "name": "Vortex Esp"
+    },
+    {
+      "id": "2097400",
+      "name": "VPL Real madrid"
+    },
+    {
+      "id": "163375",
+      "name": "W3SH fc"
+    },
+    {
+      "id": "323",
+      "name": "Wadenkrampf RS"
+    },
+    {
+      "id": "2448479",
+      "name": "Waffles XI"
+    },
+    {
+      "id": "1142038",
+      "name": "WataruDoing FC"
+    },
+    {
+      "id": "1665533",
+      "name": "we are raysis"
+    },
+    {
+      "id": "1770042",
+      "name": "Wee Ladzios"
+    },
+    {
+      "id": "14753",
+      "name": "wendys warriors"
+    },
+    {
+      "id": "800031",
+      "name": "WeSecure"
+    },
+    {
+      "id": "1809824",
+      "name": "Whitechester x"
+    },
+    {
+      "id": "142138",
+      "name": "Wilson FC"
+    },
+    {
+      "id": "17298",
+      "name": "WiZZ PiGS FC"
+    },
+    {
+      "id": "32073",
+      "name": "World Academy"
+    },
+    {
+      "id": "84520",
+      "name": "World Academy B"
+    },
+    {
+      "id": "2569066",
+      "name": "worstenbroodjes"
+    },
+    {
+      "id": "1313",
+      "name": "Wu CF"
+    },
+    {
+      "id": "132222",
+      "name": "Xavs PSG Tennis"
+    },
+    {
+      "id": "519173",
+      "name": "Xioco FC"
+    },
+    {
+      "id": "523546",
+      "name": "Xtreme eSports"
+    },
+    {
+      "id": "3394200",
+      "name": "xX FÃ©rÃ¬zÃ  j Xx"
+    },
+    {
+      "id": "1803105",
+      "name": "Yackkkam FC"
+    },
+    {
+      "id": "3023191",
+      "name": "ye das toes"
+    },
+    {
+      "id": "1157955",
+      "name": "Yeah Courseee"
+    },
+    {
+      "id": "1954231",
+      "name": "YF Juventus U21"
+    },
+    {
+      "id": "2681",
+      "name": "YNG SKiLLZ"
+    },
+    {
+      "id": "2428490",
+      "name": "YOU FLOAT TOO"
+    },
+    {
+      "id": "1025705",
+      "name": "Yusho hay hay"
+    },
+    {
+      "id": "700631",
+      "name": "Zafer Olympus"
+    },
+    {
+      "id": "249123",
+      "name": "Zinoku FC"
+    },
+    {
+      "id": "21838",
+      "name": "Zonder Rubber"
+    }
+  ]
+}

@@ -4,61 +4,59 @@ import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 
-// Example clubs that use OurProClub bot
-const EXAMPLE_CLUBS = [
-  { id: '11247', name: 'AFC Ladzio' },
-  { id: '34771', name: 'Bloodline G FC' },
-  { id: '270983', name: 'Popping Peggys' },
-];
-
 function ClubSearchContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const initialClubId = searchParams.get('clubId') || '';
+  const initialSearch = searchParams.get('search') || '';
 
-  const [clubId, setClubId] = useState(initialClubId);
+  const [searchQuery, setSearchQuery] = useState(initialSearch);
+  const [clubs, setClubs] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [searched, setSearched] = useState(false);
+  const [dbInfo, setDbInfo] = useState(null);
 
   useEffect(() => {
-    if (initialClubId) {
-      handleLookup(initialClubId);
+    if (initialSearch) {
+      performSearch(initialSearch);
     }
   }, []);
 
-  async function handleLookup(id) {
-    const clubIdToUse = id || clubId;
-    if (!clubIdToUse.trim()) return;
-
-    // Validate it's a number
-    if (!/^\d+$/.test(clubIdToUse.trim())) {
-      setError('Please enter a valid club ID (numbers only)');
-      return;
-    }
+  async function performSearch(query) {
+    if (!query.trim()) return;
 
     setLoading(true);
     setError('');
+    setSearched(true);
 
     try {
-      // Quick check if club exists
-      const res = await fetch(`/api/ea/clubs/${clubIdToUse.trim()}`);
+      const res = await fetch(`/api/ea/clubs/search?name=${encodeURIComponent(query)}`);
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.error || data.hint || 'Club not found');
+        throw new Error(data.error || 'Search failed');
       }
 
-      // Redirect to club page
-      router.push(`/clubs/${clubIdToUse.trim()}`);
+      setClubs(data.clubs || []);
+      setDbInfo({
+        total: data.databaseSize,
+        lastUpdated: data.lastUpdated
+      });
     } catch (err) {
       setError(err.message);
+      setClubs([]);
+    } finally {
       setLoading(false);
     }
   }
 
-  function handleSubmit(e) {
+  function handleSearch(e) {
     e.preventDefault();
-    handleLookup();
+    performSearch(searchQuery);
+  }
+
+  function handleClubClick(clubId) {
+    router.push(`/clubs/${clubId}`);
   }
 
   return (
@@ -72,42 +70,29 @@ function ClubSearchContent() {
       </Link>
 
       <div className="text-center mb-6 sm:mb-10">
-        <h1 className="text-2xl sm:text-4xl font-bold font-display gradient-text mb-2 sm:mb-3">Club Lookup</h1>
-        <p className="text-sm sm:text-base text-slate-400">Enter your club ID to view stats and match history</p>
-      </div>
-
-      {/* How to get Club ID */}
-      <div className="max-w-2xl mx-auto mb-8 p-4 bg-slate-800/50 border border-slate-700 rounded-lg">
-        <h3 className="text-cyan-400 font-semibold mb-2">How to get your Club ID</h3>
-        <ol className="text-slate-300 text-sm space-y-1 list-decimal list-inside">
-          <li>Use the OurProClub Discord bot in your server</li>
-          <li>Run the <code className="bg-slate-700 px-1 rounded">/matches</code> command</li>
-          <li>Click "View Your API" button at the bottom</li>
-          <li>Your club ID is in the URL: <code className="bg-slate-700 px-1 rounded">clubId=XXXXX</code></li>
-        </ol>
-        <p className="text-slate-500 text-xs mt-2">
-          Note: Only clubs using the OurProClub Discord bot will have data available.
-        </p>
+        <h1 className="text-2xl sm:text-4xl font-bold font-display gradient-text mb-2 sm:mb-3">Club Search</h1>
+        <p className="text-sm sm:text-base text-slate-400">Search from {dbInfo?.total || '700+'} registered Pro Clubs teams</p>
       </div>
 
       {/* Search Form */}
-      <form onSubmit={handleSubmit} className="max-w-xl mx-auto mb-6 sm:mb-10">
+      <form onSubmit={handleSearch} className="max-w-2xl mx-auto mb-6 sm:mb-10">
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
           <div className="flex-1">
             <input
               type="text"
-              value={clubId}
-              onChange={(e) => setClubId(e.target.value)}
-              placeholder="Enter club ID (e.g., 11247)"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search club name..."
               className="input"
+              autoFocus
             />
           </div>
           <button
             type="submit"
-            disabled={loading || !clubId.trim()}
+            disabled={loading || !searchQuery.trim()}
             className="btn-primary px-6 sm:px-8"
           >
-            {loading ? 'Loading...' : 'View Club'}
+            {loading ? 'Searching...' : 'Search'}
           </button>
         </div>
       </form>
@@ -115,8 +100,7 @@ function ClubSearchContent() {
       {/* Error */}
       {error && (
         <div className="max-w-2xl mx-auto mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg text-red-400">
-          <p className="font-semibold mb-1">Club not found</p>
-          <p className="text-sm">{error}</p>
+          {error}
         </div>
       )}
 
@@ -125,45 +109,68 @@ function ClubSearchContent() {
         <div className="flex items-center justify-center py-16">
           <div className="text-center">
             <div className="w-12 h-12 border-4 border-cyan-500/30 border-t-cyan-500 rounded-full animate-spin mx-auto mb-4"></div>
-            <p className="text-slate-400">Loading club data...</p>
+            <p className="text-slate-400">Searching clubs...</p>
           </div>
         </div>
       )}
 
-      {/* Example Clubs */}
-      {!loading && (
-        <div className="max-w-2xl mx-auto">
-          <h3 className="text-slate-400 text-sm mb-4">Example clubs to try:</h3>
-          <div className="grid gap-3">
-            {EXAMPLE_CLUBS.map((club) => (
-              <button
-                key={club.id}
-                onClick={() => {
-                  setClubId(club.id);
-                  handleLookup(club.id);
-                }}
-                className="card p-4 card-hover flex items-center justify-between group text-left w-full"
-              >
-                <div className="flex items-center gap-3 min-w-0 flex-1">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center text-xl border border-cyan-500/20 flex-shrink-0">
-                    ⚽
+      {/* Results */}
+      {searched && !loading && (
+        <div className="max-w-4xl mx-auto">
+          {clubs.length === 0 ? (
+            <div className="text-center py-12">
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-xl font-semibold text-slate-300 mb-2">No clubs found</h3>
+              <p className="text-slate-500 mb-4">Try a different search term</p>
+              <div className="text-sm text-slate-600 max-w-md mx-auto">
+                <p className="mb-2">Can't find your club? It may not be in our database yet.</p>
+                <p>Clubs are added when they use the OurProClub Discord bot.</p>
+              </div>
+            </div>
+          ) : (
+            <div className="grid gap-4">
+              <p className="text-slate-400 text-sm">{clubs.length} club{clubs.length !== 1 ? 's' : ''} found</p>
+              {clubs.map((club) => (
+                <button
+                  key={club.clubId}
+                  onClick={() => handleClubClick(club.clubId)}
+                  className="card p-4 sm:p-6 card-hover flex items-center justify-between group text-left w-full"
+                >
+                  <div className="flex items-center gap-3 sm:gap-4 min-w-0 flex-1">
+                    <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center text-xl sm:text-2xl border border-cyan-500/20 flex-shrink-0">
+                      ⚽
+                    </div>
+                    <div className="min-w-0">
+                      <h3 className="text-base sm:text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors truncate">
+                        {club.name}
+                      </h3>
+                      <p className="text-slate-400 text-xs sm:text-sm">
+                        Club ID: {club.clubId}
+                      </p>
+                    </div>
                   </div>
-                  <div className="min-w-0">
-                    <h3 className="text-base font-semibold text-white group-hover:text-cyan-400 transition-colors truncate">
-                      {club.name}
-                    </h3>
-                    <p className="text-slate-400 text-xs">
-                      Club ID: {club.id}
-                    </p>
+                  <div className="text-slate-400 group-hover:text-cyan-400 transition-colors flex-shrink-0 ml-2">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                   </div>
-                </div>
-                <div className="text-slate-400 group-hover:text-cyan-400 transition-colors flex-shrink-0 ml-2">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </button>
-            ))}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Initial State */}
+      {!searched && !loading && (
+        <div className="text-center py-16">
+          <div className="text-6xl mb-4">⚽</div>
+          <h3 className="text-xl font-semibold text-slate-300 mb-2">Search for a club</h3>
+          <p className="text-slate-500 max-w-md mx-auto mb-6">
+            Enter a club name above to search for Pro Clubs teams and view their detailed statistics
+          </p>
+          <div className="text-xs text-slate-600">
+            Powered by OurProClub API • {dbInfo?.total || '700+'} clubs indexed
           </div>
         </div>
       )}

@@ -1,23 +1,40 @@
 import { NextResponse } from 'next/server';
-import { searchClubs } from '@/lib/ea-api';
+import clubsDatabase from '@/data/clubs-database.json';
 
 export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
-    const name = searchParams.get('name');
-    const platform = searchParams.get('platform') || 'ps5';
+    const query = searchParams.get('name') || searchParams.get('query') || '';
+    const limit = parseInt(searchParams.get('limit') || '20');
 
-    if (!name) {
-      return NextResponse.json({ error: 'Club name is required' }, { status: 400 });
+    if (!query.trim()) {
+      return NextResponse.json({
+        clubs: [],
+        total: clubsDatabase.totalClubs,
+        message: 'Please provide a search query'
+      });
     }
 
-    const data = await searchClubs(name, platform);
-    return NextResponse.json(data);
+    const searchLower = query.toLowerCase().trim();
+
+    // Search clubs by name (fuzzy matching)
+    const matches = clubsDatabase.clubs
+      .filter(club => club.name.toLowerCase().includes(searchLower))
+      .slice(0, limit)
+      .map(club => ({
+        clubId: club.id,
+        name: club.name,
+      }));
+
+    return NextResponse.json({
+      clubs: matches,
+      total: matches.length,
+      query: query,
+      databaseSize: clubsDatabase.totalClubs,
+      lastUpdated: clubsDatabase.lastUpdated,
+    });
   } catch (error) {
     console.error('Club search error:', error);
-    return NextResponse.json({
-      error: 'EA API unavailable. The EA servers block requests from cloud hosting. Try searching directly on ea.com/fc/pro-clubs',
-      blocked: true
-    }, { status: 503 });
+    return NextResponse.json({ error: 'Search failed' }, { status: 500 });
   }
 }

@@ -6,7 +6,6 @@ import Link from 'next/link';
 import ClubStats from '@/components/clubs/ClubStats';
 import PlayerList from '@/components/clubs/PlayerList';
 import MatchHistory from '@/components/clubs/MatchHistory';
-import PitchView from '@/components/clubs/PitchView';
 
 function ClubDetailContent({ clubId }) {
   const searchParams = useSearchParams();
@@ -187,18 +186,7 @@ function ClubDetailContent({ clubId }) {
       )}
 
       {activeTab === 'squad' && (
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* Pitch View */}
-          <div className="card p-6">
-            <h3 className="text-lg font-semibold text-white mb-4">Formation</h3>
-            <PitchView players={members?.members} clubName={info?.name} />
-          </div>
-
-          {/* Player List */}
-          <div>
-            <PlayerList players={members?.members} />
-          </div>
-        </div>
+        <PlayerList players={members?.members} />
       )}
     </div>
   );

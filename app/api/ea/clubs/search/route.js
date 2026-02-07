@@ -1,11 +1,21 @@
 import { NextResponse } from 'next/server';
 import clubsDatabase from '@/data/clubs-database.json';
 
+// Security constants
+const MAX_LIMIT = 500;
+const MAX_QUERY_LENGTH = 100;
+
 export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
-    const query = searchParams.get('name') || searchParams.get('query') || '';
-    const limit = parseInt(searchParams.get('limit') || '20');
+
+    // Input validation: limit query length to prevent abuse
+    const rawQuery = searchParams.get('name') || searchParams.get('query') || '';
+    const query = rawQuery.substring(0, MAX_QUERY_LENGTH);
+
+    // Input validation: cap limit to prevent DoS
+    const requestedLimit = parseInt(searchParams.get('limit') || '20');
+    const limit = Math.min(Math.max(1, requestedLimit || 20), MAX_LIMIT);
 
     if (!query.trim()) {
       return NextResponse.json({

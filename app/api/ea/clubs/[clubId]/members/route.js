@@ -1,11 +1,17 @@
 import { NextResponse } from 'next/server';
 import { getPlayerStats } from '@/lib/ourproclub-api';
 
+// Security constants
+const MAX_LIMIT = 1000;
+
 export async function GET(request, { params }) {
   try {
     const { clubId } = await params;
     const { searchParams } = new URL(request.url);
-    const limit = parseInt(searchParams.get('limit') || '500');
+
+    // Input validation: cap limit to prevent DoS
+    const requestedLimit = parseInt(searchParams.get('limit') || '500');
+    const limit = Math.min(Math.max(1, requestedLimit || 500), MAX_LIMIT);
 
     const players = await getPlayerStats(clubId, limit);
 

@@ -77,10 +77,10 @@ export async function GET(request, { params }) {
 
     return NextResponse.json(data);
   } catch (error) {
+    // Log full error server-side but don't expose to client
     console.error('Club data error:', error);
     return NextResponse.json({
-      error: 'Failed to fetch club data. Please try again later.',
-      message: error.message
+      error: 'Failed to fetch club data. Please try again later.'
     }, { status: 503 });
   }
 }

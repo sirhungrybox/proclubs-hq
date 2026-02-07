@@ -1,11 +1,17 @@
 import { NextResponse } from 'next/server';
 import { getClubMatches } from '@/lib/ourproclub-api';
 
+// Security constants
+const MAX_LIMIT = 1000;
+
 export async function GET(request, { params }) {
   try {
     const { clubId } = await params;
     const { searchParams } = new URL(request.url);
-    const limit = parseInt(searchParams.get('limit') || '50');
+
+    // Input validation: cap limit to prevent DoS
+    const requestedLimit = parseInt(searchParams.get('limit') || '50');
+    const limit = Math.min(Math.max(1, requestedLimit || 50), MAX_LIMIT);
     const matchType = searchParams.get('matchType'); // Optional filter
 
     let matches = await getClubMatches(clubId, limit);
